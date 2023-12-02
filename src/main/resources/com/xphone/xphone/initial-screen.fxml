@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xphone.xphone.MainScreen">
+   <children>
+      <VBox prefHeight="801.0" prefWidth="1200.0">
+         <children>
+            <MenuBar prefHeight="31.0" prefWidth="1201.0" style="-fx-background-color: black;">
+              <menus>
+                <Menu mnemonicParsing="false" style="-fx-text-base-color: white; -fx-background-color: black; -fx-text-fill: #bc784e;" text="Cliente">
+                  <items>
+                    <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Novo cadastro" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Nova OS" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Buscar OS" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Buscar Clientes" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Produtos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Consulta produto" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Gerenciar produtos" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Caixa">
+                  <items>
+                    <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Abrir caixa" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Lançar vendas" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Fechar caixa" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Relatorios">
+                    <items>
+                      <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Vendas por mes" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Venda por funcionario" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fitHeight="132.0" fitWidth="1211.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/logo-X-Phone%20amarelo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="360.0" top="300.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
