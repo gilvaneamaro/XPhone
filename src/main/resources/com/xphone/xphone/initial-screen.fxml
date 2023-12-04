@@ -17,8 +17,7 @@
               <menus>
                 <Menu mnemonicParsing="false" style="-fx-text-base-color: white; -fx-background-color: black; -fx-text-fill: #bc784e;" text="Cliente">
                   <items>
-                    <MenuItem fx:id="cadastroClientes" mnemonicParsing="false" onAction="#openTelaCadastroCliente" style="-fx-text-fill: black;" text="Novo cadastro" />
-                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Nova OS" />
+                    <MenuItem fx:id="cadastroClientes" mnemonicParsing="false" onAction="#openTelaCadastroCliente" style="-fx-text-fill: black;" text="Abrir OS" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Buscar OS" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Buscar Clientes" />
                   </items>
@@ -36,7 +35,7 @@
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Fechar caixa" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Relatorios">
+                  <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Relatórios">
                     <items>
                       <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Vendas por mes" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Venda por funcionario" />
