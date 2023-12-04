@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xphone.xphone.CadastroController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xphone.xphone.CadastroController">
    <children>
       <VBox prefHeight="801.0" prefWidth="1200.0">
          <children>
@@ -20,9 +26,8 @@
                <menus>
                   <Menu mnemonicParsing="false" style="-fx-text-base-color: white; -fx-background-color: black; -fx-text-fill: #bc784e;" text="Cliente">
                      <items>
-                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Novo cadastro" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Nova OS" />
-                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Buscar OS" />
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Consultar OS" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Buscar Clientes" />
                      </items>
                   </Menu>
@@ -39,43 +44,99 @@
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Fechar caixa" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Relatorios">
+                  <Menu mnemonicParsing="false" style="-fx-text-base-color: white;" text="Relatórios">
                      <items>
+                        <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Fechamento do dia" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Vendas por mes" />
                         <MenuItem mnemonicParsing="false" style="-fx-text-fill: black;" text="Venda por funcionario" />
                      </items>
                   </Menu>
                </menus>
             </MenuBar>
-            <ImageView fitHeight="72.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../assets/logo-X-Phone%20amarelo.png" />
-               </image>
-               <VBox.margin>
-                  <Insets left="980.0" top="20.0" />
-               </VBox.margin>
-            </ImageView>
+            <HBox prefHeight="82.0" prefWidth="1200.0">
+               <children>
+                  <Label prefHeight="51.0" prefWidth="412.0" text="Nova ordem de serviço" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="30.0" right="-300.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="72.0" fitWidth="198.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/logo-X-Phone%20amarelo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="800.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
             <HBox prefHeight="23.0" prefWidth="1200.0">
                <children>
-                  <Label text="Nome completo">
+                  <Label prefHeight="17.0" prefWidth="147.0" text="CPF">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </Label>
-                  <Label text="Label">
-                     <HBox.margin>
-                        <Insets left="30.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label text="Label" />
                </children>
                <VBox.margin>
-                  <Insets top="-60.0" />
+                  <Insets />
                </VBox.margin>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="1200.0">
+               <children>
+                  <TextField prefHeight="25.0" prefWidth="147.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="1200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="367.0" text="Nome completo">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="Contato" />
+                  <Label text="Email" />
+               </children>
             </HBox>
             <HBox prefHeight="46.0" prefWidth="1200.0">
                <children>
-                  <TextField prefHeight="24.0" prefWidth="536.0">
+                  <TextField prefHeight="25.0" prefWidth="336.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="147.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField prefHeight="25.0" prefWidth="205.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="22.0" prefWidth="1200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="193.0" text="Marca">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="136.0" text="Modelo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="1200.0">
+               <children>
+                  <TextField prefHeight="25.0" prefWidth="160.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -85,7 +146,60 @@
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField />
+                  <CheckBox mnemonicParsing="false" text="Liga?">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Molhou?">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                  <CheckBox mnemonicParsing="false" text="Tela quebrada?">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="26.0" prefWidth="1200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="783.0" text="Descrição">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="136.0" text="Previsão de entrega" />
+               </children>
+            </HBox>
+            <HBox prefHeight="275.0" prefWidth="1224.0">
+               <children>
+                  <TextArea prefHeight="275.0" prefWidth="750.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </TextArea>
+                  <DatePicker>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets left="-170.0" top="250.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button mnemonicParsing="false" text="Criar OS">
+                     <HBox.margin>
+                        <Insets left="30.0" top="250.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label text="OS aberta por">
+                     <padding>
+                        <Insets left="-240.0" top="230.0" />
+                     </padding>
+                  </Label>
                </children>
             </HBox>
          </children>
