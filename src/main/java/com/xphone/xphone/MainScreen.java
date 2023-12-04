@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -18,10 +19,14 @@ public class MainScreen  extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainScreen.class.getResource("initial-screen.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 900);
-        mainScene = new Scene(fxmlLoader.load(), 900, 600);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/xp.png")));
+
+
+        mainScene = new Scene(fxmlLoader.load(), 1200, 900);
+
+
         stage.setTitle("XPhone");
-        stage.setScene(scene);
+        stage.setScene(mainScene);
         stage.show();
     }
     public static Scene getMainScene(){
