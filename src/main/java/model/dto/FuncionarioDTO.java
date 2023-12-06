@@ -1,6 +1,7 @@
 package model.dto;
 
 public class FuncionarioDTO {
+    private Long id;
     private String name;
     private String cpf;
     private Double vendas;
@@ -9,11 +10,16 @@ public class FuncionarioDTO {
     public FuncionarioDTO() {
     }
 
-    public FuncionarioDTO(String name, String cpf, Double vendas, String password) {
+    public FuncionarioDTO(Long id, String name, String cpf, Double vendas, String password) {
+        this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.vendas = vendas;
         this.password = password;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getName() {

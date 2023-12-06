@@ -87,7 +87,7 @@
             </HBox>
             <HBox prefHeight="37.0" prefWidth="1200.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="147.0">
+                  <TextField fx:id="cpf" prefHeight="25.0" prefWidth="147.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -107,17 +107,17 @@
             </HBox>
             <HBox prefHeight="46.0" prefWidth="1200.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="336.0">
+                  <TextField fx:id="nomeCliente" prefHeight="25.0" prefWidth="336.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField prefHeight="25.0" prefWidth="147.0">
+                  <TextField fx:id="contatoCliente" prefHeight="25.0" prefWidth="147.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField prefHeight="25.0" prefWidth="205.0">
+                  <TextField fx:id="emailCliente" prefHeight="25.0" prefWidth="205.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -136,27 +136,27 @@
             </HBox>
             <HBox prefHeight="46.0" prefWidth="1200.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="160.0">
+                  <TextField fx:id="marcaAparelho" prefHeight="25.0" prefWidth="160.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextField>
-                  <TextField>
+                  <TextField fx:id="modeloAparelho">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextField>
-                  <CheckBox mnemonicParsing="false" text="Liga?">
+                  <CheckBox fx:id="liga" mnemonicParsing="false" text="Liga?">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Molhou?">
+                  <CheckBox fx:id="molhou" mnemonicParsing="false" text="Molhou?">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </CheckBox>
-                  <CheckBox mnemonicParsing="false" text="Tela quebrada?">
+                  <CheckBox fx:id="telaQuebrada" mnemonicParsing="false" text="Tela quebrada?">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -165,7 +165,7 @@
             </HBox>
             <HBox prefHeight="26.0" prefWidth="1200.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="783.0" text="Descrição">
+                  <Label prefHeight="17.0" prefWidth="688.0" text="Descrição">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
@@ -175,33 +175,37 @@
             </HBox>
             <HBox prefHeight="275.0" prefWidth="1224.0">
                <children>
-                  <TextArea prefHeight="275.0" prefWidth="750.0">
+                  <TextArea fx:id="descricaoOS" prefHeight="275.0" prefWidth="655.0">
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
                   </TextArea>
-                  <DatePicker>
+                  <VBox prefHeight="297.0" prefWidth="514.0">
+                     <children>
+                        <DatePicker fx:id="dataEntrega">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </DatePicker>
+                        <Label prefHeight="24.0" prefWidth="75.0" text="OS aberta por">
+                           <padding>
+                              <Insets top="180.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="funcionarioComboBox" prefWidth="150.0" />
+                        <Button fx:id="criarOS" mnemonicParsing="false" onAction="#onCriarOSbutton" text="Criar OS">
+                           <VBox.margin>
+                              <Insets left="300.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
                      <HBox.margin>
                         <Insets left="30.0" />
                      </HBox.margin>
-                  </DatePicker>
-                  <ComboBox prefWidth="150.0">
-                     <HBox.margin>
-                        <Insets left="-170.0" top="250.0" />
-                     </HBox.margin>
-                  </ComboBox>
-                  <Button mnemonicParsing="false" text="Criar OS">
-                     <HBox.margin>
-                        <Insets left="30.0" top="250.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Label text="OS aberta por">
-                     <padding>
-                        <Insets left="-240.0" top="230.0" />
-                     </padding>
-                  </Label>
+                  </VBox>
                </children>
             </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
          </children>
       </VBox>
    </children>

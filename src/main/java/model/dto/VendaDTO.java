@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VendaDTO {
+    private Long id;
     private FuncionarioDTO funcionario;
     private List<ProdutoDTO> listaProdutos = new ArrayList<>();
     private ClienteDTO cliente;
@@ -14,7 +15,8 @@ public class VendaDTO {
     public VendaDTO() {
     }
 
-    public VendaDTO(FuncionarioDTO funcionario, List<ProdutoDTO> listaProdutos, ClienteDTO cliente, LocalDate dataQuitacao, OrdemDeServicoDTO ordemDeServico) {
+    public VendaDTO(Long id, FuncionarioDTO funcionario, List<ProdutoDTO> listaProdutos, ClienteDTO cliente, LocalDate dataQuitacao, OrdemDeServicoDTO ordemDeServico) {
+        this.id = id;
         this.funcionario = funcionario;
         this.listaProdutos = listaProdutos;
         this.cliente = cliente;
@@ -46,6 +48,10 @@ public class VendaDTO {
         this.dataQuitacao = dataQuitacao;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public OrdemDeServicoDTO getOrdemDeServico() {
         return ordemDeServico;
     }
@@ -72,5 +78,9 @@ public class VendaDTO {
             }
         }
         return itensEncontrados;
+    }
+
+    public List<ProdutoDTO> getListaProdutos() {
+        return listaProdutos;
     }
 }

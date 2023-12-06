@@ -5,15 +5,29 @@ public class ClienteDTO {
     private String emailCliente;
     private String cpfCliente;
     private String telefoneCliente;
+    private Long id;
 
     public ClienteDTO() {
     }
 
-    public ClienteDTO(String nomeCliente, String emailCliente, String cpfCliente, String telefoneCliente) {
+    public ClienteDTO(String nomeCliente, String emailCliente, String cpfCliente, String telefoneCliente, Long id) {
         this.nomeCliente = nomeCliente;
         this.emailCliente = emailCliente;
         this.cpfCliente = cpfCliente;
         this.telefoneCliente = telefoneCliente;
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getEmailCliente() {
+        return emailCliente;
+    }
+
+    public void setEmailCliente(String emailCliente) {
+        this.emailCliente = emailCliente;
     }
 
     public String getNomeCliente() {
