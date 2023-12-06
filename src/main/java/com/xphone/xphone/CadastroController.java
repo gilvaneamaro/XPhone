@@ -4,7 +4,11 @@ package com.xphone.xphone;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import model.dao.ClienteDAO;
 import model.dto.ClienteDTO;
+import utils.Alerts;
+
+import java.sql.SQLException;
 
 public class CadastroController extends LoadScreen {
     @FXML
@@ -36,12 +40,14 @@ public class CadastroController extends LoadScreen {
     @FXML
     public Button criarOS;
     @FXML
-    public void onCriarOSbutton(ActionEvent event){
+    public void onCriarOSbutton(ActionEvent event) throws SQLException {
+        ClienteDAO clienteDAO = new ClienteDAO();
         ClienteDTO cliente = new ClienteDTO(nomeCliente.getText(),emailCliente.getText(),cpf.getText(),contatoCliente.getText(), 1L);
 
-        System.out.println(cliente.toString());
+        clienteDAO.addCliente(cliente);
 
 
+        //Alerts.showAlert("Sucesso!","","Cliente cadastrado com sucesso!", Alert.AlertType.INFORMATION);
 
     }
 
